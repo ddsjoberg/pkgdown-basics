@@ -61,9 +61,74 @@ url: ~
 ```
 ]
 
+---
+# Customize `_pkgdown.yml`
+
+.pull-left[
+```
+url: http://www.danieldsjoberg.com/gtsummary/
+
+template:
+  params:
+    bootswatch: flatly
+
+authors:
+  Daniel D. Sjoberg:
+    href: "http://www.danieldsjoberg.com/"
+```
+]
+
 --
 
-&lt;p align="center"&gt;&lt;img src="img/basic-pkgdown-site.png" width=85% style='border:1px solid #003B5C'&gt;&lt;/p&gt;
+.pull-right[.large[
+- Set the URL
+
+- Pick a bootswatch 3 theme
+  - Browse themes https://gallery.shinyapps.io/117-shinythemes/
+
+- Add links to your personal website
+]]
+
+--
+
+&lt;p align="center"&gt;
+Bootstrap 5 Support Coming Soon in {pkgdown} 2.0.0
+&lt;br&gt;
+&lt;img src="img/bootstrap-themes-collage.png" width=75%&gt;
+&lt;/p&gt;
+
+---
+# Customize `_pkgdown.yml`
+
+.pull-left[
+```
+navbar:
+  type: default
+  left:
+  - icon: fa-home
+    href: index.html
+  - text: Reference
+    href: reference/index.html
+  - text: News
+    href: news/index.html
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/ddsjoberg/gtsummary 
+    
+reference:
+  - title: Data Summary Tables
+  - subtitle: Standard Summary Tables
+  - contents:
+      - tbl_summary
+      - add_p.tbl_summary
+```
+]
+
+--
+
+.pull-right[
+&lt;p align="center"&gt;&lt;img src="img/gtsummary-site.jpg" width=100% style='border:1px solid #003B5C'&gt;&lt;/p&gt;
+]
 
 ???
 
@@ -86,7 +151,7 @@ We'll come back to `_pkgdown.yml` later for customization...
 
 - `use_pkgdown_github_pages()`
 
-  - calls `use_pkgdown()`
+  - Calls `use_pkgdown()`
 
   - `use_github_pages()` prepares to publish the pkgdown site from the `gh-pages` branch
 
@@ -95,44 +160,19 @@ We'll come back to `_pkgdown.yml` later for customization...
   - The pkgdown site's URL is added to the pkgdown configuration file, to the URL field of `DESCRIPTION`, and to the GitHub repo.
 ]
 
----
-# Customize `_pkgdown.yml`
-
-```
-url: http://www.danieldsjoberg.com/gtsummary/
-
-template:
-  params:
-    bootswatch: flatly
-
-authors:
-  Daniel D. Sjoberg:
-    href: "http://www.danieldsjoberg.com/"
-```
 
 ---
-# Customize `_pkgdown.yml`
-```
-navbar:
-  type: default
-  left:
-  - icon: fa-home
-    href: index.html
-  - text: Reference
-    href: reference/index.html
-  - text: News
-    href: news/index.html
-  right:
-  - icon: fa-github fa-lg
-    href: https://github.com/ddsjoberg/gtsummary 
-    
-reference:
-  - title: Data Summary Tables
-  - subtitle: Standard Summary Tables
-  - contents:
-      - tbl_summary
-      - add_p.tbl_summary
-```
+# Take-home Message
+
+.pull-left[.xxlarge[
+- Find a {pkgdown} website you like and copy the `_pkgdown.yml` file
+
+- Use the defaults without customizing the `_pkgdown.yml` file...that is great too!
+]]
+
+.pull-right[
+&lt;p align="center"&gt;&lt;img src="img/giphy.gif" width=100%&gt;&lt;/p&gt;
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
