@@ -38,10 +38,26 @@ class: inverse, center, title-slide, middle
 ]
 
 ---
+# {pkgdown}
+
+.pull-left[.xlarge[
+- The goal of pkgdown is to make it easy to make an elegant and useful package website with a minimum of work. 
+
+- You can get a basic website up and running in just a couple of minutes
+
+- {pkgdown} uses a packages `README.md`, function help files, Vignettes, and `NEWS.md` to build website
+]]
+
+.pull-right[
+&lt;p align="center"&gt;&lt;img src="img/logo.png" width=75%&gt;&lt;/p&gt;
+]
+
+---
 # {pkgdown} minimalism
 
 .pull-left[
 ```r
+# Run once to configure package to use pkgdown
 &gt; usethis::use_pkgdown()
 √ Setting active project to '~/new.pkg'
 √ Adding '^_pkgdown\\.yml$', '^docs$', 
@@ -49,6 +65,9 @@ class: inverse, center, title-slide, middle
 √ Adding 'docs' to '.gitignore'
 √ Writing '_pkgdown.yml'
 * Modify '_pkgdown.yml'
+
+# Run to build the website
+pkgdown::build_site()
 ```
 ]
 
@@ -86,7 +105,7 @@ authors:
 - Pick a bootswatch 3 theme
   - Browse themes https://gallery.shinyapps.io/117-shinythemes/
 
-- Add links to your personal website
+- Add link to your personal website
 ]]
 
 --
@@ -168,6 +187,8 @@ We'll come back to `_pkgdown.yml` later for customization...
 - Find a {pkgdown} website you like and copy the `_pkgdown.yml` file
 
 - Use the defaults without customizing the `_pkgdown.yml` file...that is great too!
+
+- More details at https://pkgdown.r-lib.org/articles/pkgdown.html
 ]]
 
 .pull-right[
